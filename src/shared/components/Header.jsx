@@ -1,6 +1,6 @@
-import NavigationList from "./NavigationList";
+import { NavigationList } from "./NavigationList";
 
-export default function Header() {
+export function Header() {
   return (
     <header>
       <img src={"./../../public/logo.png"} alt={"logo"} />

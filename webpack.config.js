@@ -10,4 +10,5 @@ exports.default = buildWebpackConfig({
   },
   mode: NODE_ENV,
   port: process.env.PORT || 8000,
+  isDev: NODE_ENV === "development",
 });

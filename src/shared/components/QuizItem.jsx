@@ -1,4 +1,4 @@
-export default function QuizItem({ quiz }) {
+export function QuizItem({ quiz }) {
   return (
     <li>
       <h2>{quiz.name}</h2>

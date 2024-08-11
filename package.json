@@ -1,6 +1,6 @@
 {
   "name": "quiz_it",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "repository": "https://github.com/NifeKKeen/QuizIt",
   "author": "NifeKKeen <110170587+NifeKKeen@users.noreply.github.com>",
@@ -24,6 +24,8 @@
     "css-loader": "^7.1.2",
     "dot-env": "^0.0.1",
     "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "sass": "^1.77.8",
     "sass-loader": "^14.2.1",
     "style-loader": "^4.0.0",
     "webpack": "^5.91.0",

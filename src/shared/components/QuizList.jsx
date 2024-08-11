@@ -1,4 +1,4 @@
-import QuizItem from "./QuizItem";
+import { QuizItem } from "./QuizItem";
 
 const quizes = [
   { name: "You don't know what", description: "Things that you have never thought about", id: 1 },
@@ -7,7 +7,7 @@ const quizes = [
   { name: "JOHN HERE THAT QUIZ", description: "quiz", id: 2332 },
 ];
 
-export default function QuizList() {
+export function QuizList() {
   return (
     <ul>
       {quizes.map(quiz => (

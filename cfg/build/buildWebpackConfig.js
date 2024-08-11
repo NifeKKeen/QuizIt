@@ -4,8 +4,7 @@ const { buildResolvers } = require("./buildResolvers");
 const { buildDevServer } = require("./buildDevServer");
 
 exports.buildWebpackConfig = function (options) {
-  const { mode, paths } = options;
-  const IS_DEV = mode === "development";
+  const { mode, paths, isDev } = options;
   return {
     mode,
     entry: paths.entry,
@@ -15,13 +14,11 @@ exports.buildWebpackConfig = function (options) {
       clean: true,
     },
     module: {
-      rules: buildLoaders(),
+      rules: buildLoaders(options),
     },
-    plugins: buildPlugins({
-      htmlPath: paths.htmlPath,
-    }),
+    plugins: buildPlugins(options),
     resolve: buildResolvers(),
-    devServer: IS_DEV ? buildDevServer(options) : undefined,
-    devtool: IS_DEV ? "eval" : undefined,
+    devServer: isDev ? buildDevServer(options) : undefined,
+    devtool: isDev ? "eval" : undefined,
   };
 };
