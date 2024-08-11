@@ -1,7 +1,16 @@
+import { Link } from "react-router-dom";
+
 export function NavigationList() {
   return (
-    <ul>
-      <li>That's a single page for know :)</li>
-    </ul>
+    <nav>
+      <ul>
+        <li>
+          <Link to={"/"}>Home</Link>
+        </li>
+        <li>
+          <Link to={"/about"}>About</Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
