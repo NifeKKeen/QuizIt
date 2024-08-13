@@ -1,9 +1,9 @@
-import "./index.sass";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import { AboutPageAsync } from "./pages/AboutPage/AboutPageAsync";
 import { Suspense } from "react";
-import { MainPageAsync } from "./pages/MainPage/MainPageAsync";
-import { NotFoundPageAsync } from "./pages/NotFoundPage/NotFoundPageAsync";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AboutPageAsync } from "@/shared/pages/AboutPage/AboutPageAsync";
+import { MainPageAsync } from "@/shared/pages/MainPage/MainPageAsync";
+import { NotFoundPageAsync } from "@/shared/pages/NotFoundPage/NotFoundPageAsync";
+import "./index.sass";
 
 export function App() {
   return (
@@ -11,7 +11,7 @@ export function App() {
       <BrowserRouter>
         <Suspense fallback={<p>LOADING</p>}>
           <Routes>
-            <Route path={"/"} element={
+            <Route path={"/"}  element={
               <MainPageAsync />
             } />
             <Route path={"/about"} element={

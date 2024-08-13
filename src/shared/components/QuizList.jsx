@@ -1,6 +1,6 @@
 import { QuizItem } from "./QuizItem";
 
-const quizes = [
+const quizzes = [
   { name: "You don't know what", description: "Things that you have never thought about", id: 1 },
   { name: "Kazakhstan History UNT 9 grade", description: "PREP", id: 4 },
   { name: "Test", description: "", id: 21 },
@@ -10,7 +10,7 @@ const quizes = [
 export function QuizList() {
   return (
     <ul>
-      {quizes.map(quiz => (
+      {quizzes.map(quiz => (
         <QuizItem
           quiz={quiz}
           key={quiz.id}

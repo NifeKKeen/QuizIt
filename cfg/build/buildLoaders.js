@@ -28,9 +28,14 @@ exports.buildLoaders = function (options) {
       "sass-loader",
     ],
   };
+  const assetsLoader = {
+    test: /\.(png|jpg|jpeg|gif)$/i,
+    type: "asset/resource",
+  }
 
   return [
     babelLoader,
+    assetsLoader,
     sassLoader,
   ];
 };

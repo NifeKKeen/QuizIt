@@ -1,6 +1,6 @@
-import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
-import { QuizList } from "../../components/QuizList";
+import { Header } from "@/shared/components/Header";
+import { Footer } from "@/shared/components/Footer";
+import { QuizList } from "@/shared/components/QuizList";
 
 export default function MainPage() {
   return <>

@@ -7,6 +7,7 @@ exports.default = buildWebpackConfig({
     entry: path.resolve(__dirname, "./src/client/index.jsx"),
     output: path.resolve(__dirname, "./dist"),
     htmlPath: path.resolve(__dirname, "./src/shared/index.html"),
+    src: path.resolve(__dirname, "src"),
   },
   mode: NODE_ENV,
   port: process.env.PORT || 8000,
