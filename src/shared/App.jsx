@@ -4,6 +4,7 @@ import { AboutPageAsync } from "@/shared/pages/AboutPage/AboutPageAsync";
 import { MainPageAsync } from "@/shared/pages/MainPage/MainPageAsync";
 import { NotFoundPageAsync } from "@/shared/pages/NotFoundPage/NotFoundPageAsync";
 import "./index.sass";
+import QuizGamePage from "./pages/QuizGamePage/QuizGamePage";
 
 export function App() {
   return (
@@ -13,6 +14,9 @@ export function App() {
           <Routes>
             <Route path={"/"}  element={
               <MainPageAsync />
+            } />
+            <Route path={"/quiz-game/:quizId"}  element={
+              <QuizGamePage />
             } />
             <Route path={"/about"} element={
               <AboutPageAsync />
