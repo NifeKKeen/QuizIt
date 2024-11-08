@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AboutPageAsync } from "@/shared/pages/AboutPage/AboutPageAsync";
 import { MainPageAsync } from "@/shared/pages/MainPage/MainPageAsync";
 import { NotFoundPageAsync } from "@/shared/pages/NotFoundPage/NotFoundPageAsync";
+import { QuizGamePageAsync } from "@/shared/pages/QuizGamePage/QuizGamePageAsync";
 import "./index.sass";
 
 export function App() {
@@ -13,6 +14,9 @@ export function App() {
           <Routes>
             <Route path={"/"}  element={
               <MainPageAsync />
+            } />
+            <Route path={"/quiz-game/:quizId"}  element={
+              <QuizGamePageAsync />
             } />
             <Route path={"/about"} element={
               <AboutPageAsync />
