@@ -4,7 +4,6 @@ import { AboutPageAsync } from "@/shared/pages/AboutPage/AboutPageAsync";
 import { MainPageAsync } from "@/shared/pages/MainPage/MainPageAsync";
 import { QuizGamePageAsync } from "@/shared/pages/QuizGamePage/QuizGamePageAsync";
 import { NotFoundPageAsync } from "@/shared/pages/NotFoundPage/NotFoundPageAsync";
-import { QuizGamePageAsync } from "@/shared/pages/QuizGamePage/QuizGamePageAsync";
 import "./index.sass";
 
 export function App() {

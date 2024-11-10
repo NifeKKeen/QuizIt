@@ -1,3 +1,5 @@
+import './Footer.module.sass';
+
 export function Footer() {
   return (
     <footer>
