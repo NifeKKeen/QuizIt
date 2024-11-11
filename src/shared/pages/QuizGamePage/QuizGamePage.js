@@ -24,6 +24,7 @@ function gameReducer(state, action) {
   if (action.type === "saveChoice") {
     const newAnswered = state.answered.slice();
     newAnswered[action.payload.index] = action.payload.variantIndex;
+    console.log(newAnswered)
     return { ...state, answered: newAnswered };
   }
   if (action.type === "finish") {

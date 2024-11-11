@@ -25,12 +25,13 @@ export function QuizGame() {
   }
 
   function handleNextQuestion() {
+    dispatchGame(
+      {
+        type: "saveChoice",
+        payload: { index: gameState.curQuestionIndex, variantIndex: gameState.selectedVariantIndex },
+      });
     if (gameState.curQuestionIndex + 1 !== gameState.quiz.questionNumber) {
-      dispatchGame(
-        {
-          type: "saveChoice",
-          payload: { index: gameState.curQuestionIndex, variantIndex: gameState.selectedVariantIndex },
-        });
+
       dispatchGame({ type: "select", payload: { index: -1 } });
       dispatchGame({ type: "changeQuestion", payload: { index: gameState.curQuestionIndex + 1 } });
     } else {
