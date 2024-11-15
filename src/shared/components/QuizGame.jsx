@@ -3,6 +3,7 @@ import { gameContext, gameDispatchContext } from "@/shared/pages/QuizGamePage/Qu
 import { useParams } from "react-router-dom";
 import { quizzes } from "./tempData";
 import { calcPercentageFromAnswers } from "@/client/utils"
+import styles from './QuizGame.module.sass';
 
 export function QuizGame() {
   const gameState = useContext(gameContext);
@@ -42,7 +43,7 @@ export function QuizGame() {
   if (!gameState.quiz || !gameState.isStarted) {
     return (
       <>
-        <button onClick={handleQuizStart}>START!</button>
+        <button onClick={handleQuizStart} className={styles.startBtn}>START!</button>
       </>
     );
   }
