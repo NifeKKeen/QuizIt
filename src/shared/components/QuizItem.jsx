@@ -1,8 +1,6 @@
 import { useNavigate } from  "react-router-dom";
 import styles from "./QuizItem.module.sass";
 
-console.log(styles);
-
 export function QuizItem({ quiz }) {
   const navigate = useNavigate();
   function handleQuizGameNavigation() {
@@ -12,6 +10,7 @@ export function QuizItem({ quiz }) {
     <li className={styles.li}>
       <div className={styles.description}>
         <h2>{quiz.name}</h2>
+        <hr className={styles.hr} />
         <p>{quiz.description}</p>
       </div>
       <button onClick={handleQuizGameNavigation} className={styles.startBtn}>Start</button>

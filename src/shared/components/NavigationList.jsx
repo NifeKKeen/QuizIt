@@ -1,8 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styles from "./NavigationList.module.sass";
 
-console.log(styles);
-
 export function NavigationList({ direction = "horizontal"  }) {
   return (
     <nav className={styles.nav}>
