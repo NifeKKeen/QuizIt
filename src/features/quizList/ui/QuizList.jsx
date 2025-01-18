@@ -1,16 +1,21 @@
 import { QuizItem } from "./QuizItem";
-import { quizzes } from "../../../../public/tempData";
 import styles from "./QuizList.module.sass";
+import useFetchQuizList from "@/features/quizList/hooks/useFetchQuizList";
+import { Spinner } from "@/shared/ui/Loading";
 
 export function QuizList() {
+  const [status] = useFetchQuizList();
+
   return (
-    <ul className={styles.ul}>
-      {quizzes.map(quiz => (
-        <QuizItem
-          quiz={quiz}
-          key={quiz.id}
-        />
-      ))}
-    </ul>
+    status.loading
+      ? <Spinner />
+      : <ul className={styles.ul}>
+        {status.data.map(quiz => (
+          <QuizItem
+            quiz={quiz}
+            key={quiz.id}
+          />
+        ))}
+      </ul>
   );
 }

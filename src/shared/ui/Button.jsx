@@ -1,6 +1,6 @@
 import styles from './Button.module.sass';
 
-function Button({type = "primary", className, ...props}) {
+export function Button({type = "primary", className, ...props}) {
   if (type === "primary") {
     className += ` ${styles.btn}`
   }
@@ -8,5 +8,3 @@ function Button({type = "primary", className, ...props}) {
     <button className={className} {...props}></button>
   );
 }
-
-export default Button;

@@ -11,15 +11,20 @@ const initialGameState = {
 };
 
 function gameReducer(state, action) {
+  if (action.type === "load") {
+    return {
+      ...state,
+      quiz: action.payload.quiz
+    };
+  }
   if (action.type === "start") {
-    if (!action.payload?.quiz) {
+    if (!state.quiz) {
       return state;
     }
     return {
       ...state,
       isStarted: true,
-      quiz: action.payload.quiz,
-      answered: new Array(action.payload.quiz.questionNumber).fill(-1),
+      answered: new Array(state.quiz.questionNumber).fill(-1),
     };
   }
   if (action.type === "select") {
