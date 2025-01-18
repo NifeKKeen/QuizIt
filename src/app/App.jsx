@@ -5,12 +5,13 @@ import { MainPageAsync } from "@/pages/MainPage/MainPageAsync";
 import { QuizGamePageAsync } from "@/pages/QuizGamePage/QuizGamePageAsync";
 import { NotFoundPageAsync } from "@/pages/NotFoundPage/NotFoundPageAsync";
 import "../styles/index.sass";
+import { PageSpinner } from "@/shared/ui/Loading";
 
 export function App() {
   return (
     <React.StrictMode>
       <BrowserRouter>
-        <Suspense fallback={<p>LOADING</p>}>
+        <Suspense fallback={<PageSpinner />}>
           <Routes>
             <Route path={"/"}  element={
               <MainPageAsync />
